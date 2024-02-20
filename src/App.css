@@ -1,0 +1,51 @@
+body {
+  background-color: #f7fafc; /* Light gray background color */
+  color: #2d3748; /* Text color */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Ensure the body covers the full height of the viewport */
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calculator {
+  max-inline-size: 22rem; /* This is the Logical Property for max-width and has very good browser support */
+  border-radius: 10px; /* Round the edges */
+  overflow: hidden; /* don't let other elements go outside the calculator */
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15), 0px 2px 4px 0px rgba(0, 0, 0, 0.12); /* Give the calculator some depth off the page */
+}
+
+.calculator__output {
+  font-size: 2rem;
+  text-align: end; /* This is the Logical Property for text-align: right; and has very good browser support. */
+  background: hwb(203 26% 68%); /* background color */
+  color: hsl(255, 100%, 100%); /* text color */
+  padding-block-start: 0.25rem; /* Logical Property for padding-top */
+  padding-block-end: 0.25rem; /* Logical Property for padding-bottom */
+  padding-inline-end: 0.75rem; /* Logical Property for padding-right */
+  /* min-height: 2rem; Set a minimum height for the output container */
+  height: 3rem; /* Set a fixed height for the output space */
+  display: flex; /* Use flexbox to center content vertically */
+  align-items: center; /* Center content vertically */
+}
+
+.calculator__keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem; /* Add some spacing between grid items */
+}
+
+.calculator__key--enter {
+  grid-column: 4 / 5; /* Start at column #4 and end at column #5 (the very right edge). */
+  grid-row: 2 / span 4; /* Start at row #2 and span 4 rows */
+}
+
+button {
+  padding: 1rem; /* Add padding to the buttons */
+}
